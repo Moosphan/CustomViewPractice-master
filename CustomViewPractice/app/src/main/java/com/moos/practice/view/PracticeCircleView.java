@@ -40,12 +40,12 @@ public class PracticeCircleView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         mPaint.setColor(Color.BLACK);
-        canvas.drawCircle(200, 200, 160, mPaint);
+        canvas.drawCircle(300, 200, 160, mPaint);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(10);
         canvas.drawCircle(660, 200, 160, mPaint);
         mPaint.setStrokeWidth(60);
-        canvas.drawCircle(200, 660, 160, mPaint);
+        canvas.drawCircle(300, 660, 160, mPaint);
         mPaint.setColor(Color.RED);
         mPaint.setStyle(Paint.Style.FILL);
         canvas.drawCircle(660, 660, 160, mPaint);
