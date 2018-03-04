@@ -1,4 +1,4 @@
-package com.moos.practice.view;
+package com.moos.practice.view.view1_1;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -41,6 +41,9 @@ public class PracticePieChartView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        /**
+         * 绘制饼图
+         */
         mPaint.setColor(Color.MAGENTA);
         canvas.drawArc(175, 175, 800, 800, -180, 120, true, mPaint);
         mPaint.setColor(Color.RED);
@@ -53,6 +56,20 @@ public class PracticePieChartView extends View {
         canvas.drawArc(190, 190, 810, 810, 60, 55, true, mPaint);
         mPaint.setColor(Color.YELLOW);
         canvas.drawArc(180, 180, 820, 820, 120, 55, true, mPaint);
+        /**
+         * 绘制折线(one example)
+         */
+        mPaint.setColor(Color.parseColor("#f3f3f3"));
+        canvas.drawLine(270, 270, 200, 200, mPaint);
+        canvas.drawLine(200, 200, 150, 200, mPaint);
+        //......
+
+        /**
+         * 绘制文字
+         */
+        mPaint.setTextSize(30);
+        canvas.drawText("android", 30, 210 ,mPaint);
+
 
     }
 }

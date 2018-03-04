@@ -1,8 +1,7 @@
-package com.moos.practice.view;
+package com.moos.practice.view.view1_1;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -10,25 +9,25 @@ import android.view.View;
 
 /**
  * Created by moos on 2018/3/2.
+ * func:绘制椭圆
  */
 
-public class PracticeColorView extends View {
+public class PracticeOvalView extends View {
     private Paint mPaint;
-    public PracticeColorView(Context context) {
+    public PracticeOvalView(Context context) {
         super(context);
         init();
     }
 
-    public PracticeColorView(Context context, @Nullable AttributeSet attrs) {
+    public PracticeOvalView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public PracticeColorView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public PracticeOvalView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
-
     private void init(){
         mPaint = new Paint();
         mPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
@@ -38,7 +37,6 @@ public class PracticeColorView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mPaint.setStyle(Paint.Style.FILL);
-        canvas.drawColor(Color.YELLOW);
+        canvas.drawOval(200, 200, 800, 500, mPaint);
     }
 }

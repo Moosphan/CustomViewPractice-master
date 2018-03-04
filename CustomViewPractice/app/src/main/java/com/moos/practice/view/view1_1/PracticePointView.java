@@ -1,4 +1,4 @@
-package com.moos.practice.view;
+package com.moos.practice.view.view1_1;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,22 +9,21 @@ import android.view.View;
 
 /**
  * Created by moos on 2018/3/2.
- * func:画弧线
  */
 
-public class PracticeArcView extends View {
+public class PracticePointView extends View {
     private Paint mPaint;
-    public PracticeArcView(Context context) {
+    public PracticePointView(Context context) {
         super(context);
         init();
     }
 
-    public PracticeArcView(Context context, @Nullable AttributeSet attrs) {
+    public PracticePointView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public PracticeArcView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public PracticePointView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
@@ -38,10 +37,11 @@ public class PracticeArcView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mPaint.setStyle(Paint.Style.STROKE);
-        canvas.drawArc(300 ,200, 800, 600, -180, 60, false, mPaint);
-        mPaint.setStyle(Paint.Style.FILL);
-        canvas.drawArc(300, 200, 800, 600, -110, 90, true,mPaint);
-        canvas.drawArc(300, 200, 800, 600, 30, 120 ,false, mPaint);
+        mPaint.setStrokeWidth(80);
+        mPaint.setStrokeCap(Paint.Cap.ROUND);
+        canvas.drawPoint(400, 300, mPaint);
+        mPaint.setStrokeCap(Paint.Cap.SQUARE);
+        canvas.drawPoint(800,300, mPaint);
+
     }
 }

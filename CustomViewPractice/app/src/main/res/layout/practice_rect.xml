@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.moos.practice.view.PracticeRectView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.moos.practice.view.view1_1.PracticeRectView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</com.moos.practice.view.PracticeRectView>
+</com.moos.practice.view.view1_1.PracticeRectView>

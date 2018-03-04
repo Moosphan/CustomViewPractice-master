@@ -1,8 +1,7 @@
-package com.moos.practice.view;
+package com.moos.practice.view.view1_1;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -10,22 +9,22 @@ import android.view.View;
 
 /**
  * Created by moos on 2018/3/2.
- * func:绘制圆形
+ * func:画弧线
  */
 
-public class PracticeCircleView extends View {
+public class PracticeArcView extends View {
     private Paint mPaint;
-    public PracticeCircleView(Context context) {
+    public PracticeArcView(Context context) {
         super(context);
         init();
     }
 
-    public PracticeCircleView(Context context, @Nullable AttributeSet attrs) {
+    public PracticeArcView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public PracticeCircleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public PracticeArcView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
@@ -39,16 +38,10 @@ public class PracticeCircleView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mPaint.setColor(Color.BLACK);
-        canvas.drawCircle(300, 200, 160, mPaint);
         mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setStrokeWidth(10);
-        canvas.drawCircle(660, 200, 160, mPaint);
-        mPaint.setStrokeWidth(60);
-        canvas.drawCircle(300, 660, 160, mPaint);
-        mPaint.setColor(Color.RED);
+        canvas.drawArc(300 ,200, 800, 600, -180, 60, false, mPaint);
         mPaint.setStyle(Paint.Style.FILL);
-        canvas.drawCircle(660, 660, 160, mPaint);
-
+        canvas.drawArc(300, 200, 800, 600, -110, 90, true,mPaint);
+        canvas.drawArc(300, 200, 800, 600, 30, 120 ,false, mPaint);
     }
 }

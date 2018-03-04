@@ -1,4 +1,4 @@
-package com.moos.practice.view;
+package com.moos.practice.view.view1_1;
 
 import android.content.Context;
 import android.graphics.Canvas;
