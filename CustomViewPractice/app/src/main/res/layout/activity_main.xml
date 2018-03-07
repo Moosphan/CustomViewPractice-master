@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#f8f8f8"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <Button
         android:id="@+id/practice1_1"
@@ -35,7 +35,6 @@
         android:text="绘制练习1-3"
         android:gravity="center"
         android:padding="14dp"
-        android:visibility="gone"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
         android:layout_marginTop="12dp"/>
