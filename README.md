@@ -124,16 +124,18 @@ Just for practicing custom views.
 ## 绘制顺序篇
 
 1. 需要记住下面的绘制顺序即可：
+
 draw()的super()方法之前->onDraw()->dispatchDraw()->onDrawForeground()->draw()的super方法之后
 
 ## 动画篇
 
-- ViewPropertyAnimator
+### ViewPropertyAnimator
 
 1. 基本用法：
 >使用view.animate().translationX(float x)/translationY()/translationZ()[android5.0以上使用]/alpha()/rotation()/scaleX()/scaleY();
 
 2. 常见方法：
+
 `view.setScaleX(float x);//初始化动画状态`
 `view.animate().scaleX(2f).setDuration();//设置动画时长`
 `view.animate().scaleX(2f).setInterpolator(new LinearInterpolator());//设置速度差值器`
@@ -143,7 +145,7 @@ draw()的super()方法之前->onDraw()->dispatchDraw()->onDrawForeground()->draw
 3. 注意点：
 >ViewPropertyAnimator不支持重复执行动画；移除动画监听器用`setListener(null)/setUpdateListener(null);`来实现
 
-- ObjectAnimator
+### ObjectAnimator
 
 1. 基本用法：
 >通过objectAnimator.ofxxx()方法创建animator对象，该方法中需要提供属性名称`propertyName`，如果是自定义view，该字段可以自定义，只需要提供setter/getter方法。
