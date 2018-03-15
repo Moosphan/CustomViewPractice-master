@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<om.moos.practice.view.view1_5.Practice02BeforeOnDrawView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.moos.practice.view.view1_5.Practice02BeforeOnDrawView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:textSize="16dp"

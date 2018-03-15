@@ -121,6 +121,57 @@ Just for practicing custom views.
 9. 拓展：
 - 通过前后几章节内容来实现一个自定义的折纸飞机的效果
 
+## 绘制顺序篇
+
+1. 需要记住下面的绘制顺序即可：
+draw()的super()方法之前->onDraw()->dispatchDraw()->onDrawForeground()->draw()的super方法之后
+
+## 动画篇
+
+- ViewPropertyAnimator
+
+1. 基本用法：
+>使用view.animate().translationX(float x)/translationY()/translationZ()[android5.0以上使用]/alpha()/rotation()/scaleX()/scaleY();
+
+2. 常见方法：
+`view.setScaleX(float x);//初始化动画状态`
+`view.animate().scaleX(2f).setDuration();//设置动画时长`
+`view.animate().scaleX(2f).setInterpolator(new LinearInterpolator());//设置速度差值器`
+`view.animate().scaleX(2f).setListener(..)/setUpdateListener(..);//设置动画监听器`
+`view.animate().scaleX(2f).withStartAction(..)/withEndAction(..);//一次性的动画监听器，如果viewPropertyAnimator又用来执行其他动画，这两个方法设置的回调也不会再调用`
+
+3. 注意点：
+>ViewPropertyAnimator不支持重复执行动画；移除动画监听器用`setListener(null)/setUpdateListener(null);`来实现
+
+- ObjectAnimator
+
+1. 基本用法：
+>通过objectAnimator.ofxxx()方法创建animator对象，该方法中需要提供属性名称`propertyName`，如果是自定义view，该字段可以自定义，只需要提供setter/getter方法。
+
+2. 设置监听器：
+>通过animator.addlistener()/animator.addUpdateListener()来创建动画监听器，如果动画执行过程中被取消，onAnimationEnd()方法依然会被调用，只不过onAnimationCancel()先于它执行。
+
+3. 代码示例：
+```
+private float progress = 0;
+
+private void setProgress(float progress){
+        this.progress = progress;
+        invalidate();//刷新
+    }
+
+private float getProgress(){
+        return this.progress;
+    }
+
+...
+
+ObjectAnimator animator = ObjectAnimator.ofFloat(view, "progress", 0, 65);
+                animator.setDuration(1000);
+                animator.setInterpolator(new FastOutSlowInInterpolator());
+                animator.start();
+
+```
 
 
 

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.hencoder.hencoderpracticedraw5.sample.Sample04DispatchDrawLayout
+    <com.moos.practice.sample.sample1_5.Sample04DispatchDrawLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -23,5 +23,5 @@
             android:gravity="center"
             android:text="@string/batman"/>
 
-    </com.hencoder.hencoderpracticedraw5.sample.Sample04DispatchDrawLayout>
+    </com.moos.practice.sample.sample1_5.Sample04DispatchDrawLayout>
 </FrameLayout>

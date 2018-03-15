@@ -55,7 +55,6 @@
         android:text="绘制练习1-5"
         android:gravity="center"
         android:padding="14dp"
-        android:visibility="gone"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
         android:layout_marginTop="12dp"/>
@@ -64,6 +63,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="绘制练习1-6"
+        android:gravity="center"
+        android:padding="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"/>
+    <Button
+        android:id="@+id/practice1_7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="绘制练习1-7"
+        android:visibility="gone"
+        android:gravity="center"
+        android:padding="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"/>
+    <Button
+        android:id="@+id/practice1_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="绘制练习1-8"
         android:visibility="gone"
         android:gravity="center"
         android:padding="14dp"

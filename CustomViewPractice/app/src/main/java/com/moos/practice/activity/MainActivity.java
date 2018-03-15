@@ -13,7 +13,7 @@ import com.moos.practice.R;
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button button1_1,button1_2,button1_3,button1_4,button1_5;
+    private Button button1_1,button1_2,button1_3,button1_4,button1_5,button1_6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +28,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button1_3 = findViewById(R.id.practice1_3);
         button1_4 = findViewById(R.id.practice1_4);
         button1_5 = findViewById(R.id.practice1_5);
+        button1_6 = findViewById(R.id.practice1_6);
         button1_1.setOnClickListener(this);
         button1_2.setOnClickListener(this);
         button1_3.setOnClickListener(this);
         button1_4.setOnClickListener(this);
         button1_5.setOnClickListener(this);
+        button1_6.setOnClickListener(this);
     }
 
 
@@ -62,6 +64,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.practice1_5:
                 Intent intent1_5 = new Intent(this,Practice1_5Activity.class);
                 startActivity(intent1_5);
+                break;
+
+            case R.id.practice1_6:
+                Intent intent1_6 = new Intent(this,Practice1_6Activity.class);
+                startActivity(intent1_6);
                 break;
 
         }

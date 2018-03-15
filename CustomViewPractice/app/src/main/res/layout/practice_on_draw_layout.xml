@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.hencoder.hencoderpracticedraw5.practice.Practice03OnDrawLayout
+    <com.moos.practice.view.view1_5.Practice03OnDrawLayout
         android:layout_width="160dp"
         android:layout_height="210dp"
         android:orientation="vertical">
 
-    </com.hencoder.hencoderpracticedraw5.practice.Practice03OnDrawLayout>
+    </com.moos.practice.view.view1_5.Practice03OnDrawLayout>
 </FrameLayout>
